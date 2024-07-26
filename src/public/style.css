@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+
+* {
+  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background: #ffffff;
+  margin: 0;
+  width: auto;
+  height: 100vh;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+}
+
+.navigation-content {
+  background: rgb(168, 234, 110);
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+}
+
+.navigation-content ul {
+  font-size: 14px;
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 10px;
+}
+
+.navigation-content ul li {
+  list-style: none;
+  width: auto;
+  padding: 10px;
+  margin: 5px 0px;
+}
+
+.navigation-content ul li a {
+  position: relative;
+  text-decoration: none;
+  color: rgb(34, 84, 86);
+  padding: 10px;
+}
+
+.navigation-content ul li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  border-radius: 20px;
+  background: rgb(26, 115, 120);
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+
+.navigation-content ul a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.navigation-content span {
+  font-style: oblique;
+  font-size: 20px;
+  color: rgb(34, 84, 86);
+}
+
+.search-content {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-content form {
+  position: relative;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-content form::after {
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 1px;
+  background: black;
+  left: 5px;
+  bottom: 0;
+}
+
+.search-content form #search {
+  width: 300px;
+  height: 30px;
+  padding: 0px 10px;
+  margin-right: 1px;
+  outline: none;
+  border: none;
+}
+
+.search-content form a {
+  color: black;
+}
+
+.start-content {
+  margin: 0;
+  width: 100%;
+  height: 60%;
+
+  box-sizing: border-box;
+}
+
+.images-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow-x: scroll;
+  overflow: hidden;
+
+  scroll-snap-type: x mandatory;
+}
+
+.start-content .images-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex: 0 0 100%;
+  align-items: center;
+  transition: all 0.5s linear;
+  animation: fadeIn 5s;
+
+  scroll-snap-align: center;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
