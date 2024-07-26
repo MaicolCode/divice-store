@@ -3,10 +3,10 @@ export const routes = Router()
 
 const products = [
   {
-    name: 'Apple MacBook Pro 17',
-    color: 'Silver',
-    category: 'Laptop',
-    price: '$2999'
+    name: 'Microsoft Surface Pro',
+    color: 'White',
+    category: 'Laptop PC',
+    price: '$1999'
   },
   {
     name: 'Apple MacBook Pro 17',
