@@ -4,18 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css" type="text/css">
     <title>
         <%= title%>
     </title>
-    <%- include('partials/head')%>
+    <%- include('../partials/head')%>
 </head>
 
 <body>
     <!-- Uso el metodo include para incluir estilo o elementos dentro de los html o las vistas. -->
     <header>
-        <%- include('partials/navigation')%>
-            <%- include('partials/buscador')%>
+        <%- include('../partials/header')%>
+            <%- include('../partials/buscador')%>
     </header>
     <main>
         <div class="start-content">

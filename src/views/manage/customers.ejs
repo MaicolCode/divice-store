@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./partials/head')%>
+        <title>
+            <%= title%>
+        </title>
+</head>
+
+<body>
+    <main>
+        <%- include('./partials/header')%>
+            <div>
+                <aside class="w-full mt-14 px-10">
+                    <p class="text-2xl mb-5">Listado de Clientes</p>
+                    <hr>
+                </aside>
+                <section class="w-full h-full py-20 px-10">
+                    <%- include('./components/tb-clients')%>
+                </section>
+            </div>
+    </main>
+</body>
+
+</html>

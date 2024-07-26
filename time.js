@@ -1,3 +1,3 @@
-const os = require('node:os')
+import { uptime } from 'node:os'
 
-console.log(os.uptime() / 60 / 60)
+console.log(uptime() / 60 / 60)
