@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head')%>
+        <title>
+            <%= title%>
+        </title>
+</head>
+
+<body>
+    <main>
+        <%- include('../partials/header')%>
+            <section class="p-5">
+                <div class="px-24 py-10">
+                    <article class="flex items-center justify-between mb-5">
+                        <p class="text-base font-medium">Registrar un nuevo dispositivo.</p>
+                        <div class="text-blue-600 text-sm flex items-center gap-1 ">
+                            <a href="/devices" class="font-medium hover:underline">Regresar</a>
+                            <%- include('../icons/go')%>
+
+                        </div>
+                    </article>
+
+                    <form class="w-full border px-5 py-10 rounded-md shadow-md">
+                        <div class="mb-5">
+                            <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 ">Nombre del
+                                dispositivo</label>
+                            <input type="text" id="base-input"
+                                class="w-2/5 block p-2.5 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        </div>
+                        <div class="mb-5">
+                            <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 ">Categoria al
+                                que pertenece.</label>
+                            <select id="countries"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/5 p-2.5 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">
+
+                                <option>United States</option>
+                                <option>Canada</option>
+                                <option>France</option>
+                                <option>Germany</option>
+                            </select>
+                        </div>
+                        <div class="mb-5">
+                            <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 ">Precio del
+                                dispositivo.</label>
+                            <input type="text" id="base-input"
+                                class="w-2/5 block p-2.5 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        </div>
+                        <div class="mb-5">
+                            <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 ">Descripcion
+                                del dispositivo.</label>
+                            <textarea id="message" rows="4"
+                                class="block p-2.5 w-2/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="Describe al dispositivo en esta seccion..."></textarea>
+                        </div>
+                        <div>
+                            <label class="block mb-2 text-sm font-medium text-gray-900" for="user_avatar">Cargar imagen
+                                del dispositivo.</label>
+                            <input
+                                class="block w-2/5 text-sm text-white border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:placeholder-gray-400 file:bg-gray-800 file:py-2 file:border-none file:font-medium file:text-white"
+                                aria-describedby="user_avatar_help" id="user_avatar" type="file">
+                            <div class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="user_avatar_help">A profile
+                                picture is useful to confirm your are logged into your account</div>
+                        </div>
+                        <div class="relative h-12">
+                            <button
+                                class="text-sm font-medium border py-3 px-5 absolute right-0 rounded-md bg-slate-700 bg-opacity-25 active:bg-slate-400 active:bg-opacity-45">Registrar
+                                dispositivo</button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </section>
+    </main>
+</body>
+
+</html>

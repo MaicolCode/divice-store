@@ -2,8 +2,6 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%- include('./partials/head')%>
         <title>
             <%= title%>
@@ -15,10 +13,18 @@
         <%- include('./partials/header')%>
             <div>
                 <aside class="w-full mt-14 px-10">
-                    <p class="text-2xl mb-5">Listado de Clientes</p>
+                    <article class="flex items-center justify-between">
+                        <p class="text-base mb-2 font-medium">Listado de Clientes</p>
+                        <div class="text-blue-600 text-sm flex items-center gap-1 ">
+                            <a href="/formCustomers" class="font-medium hover:underline">Agregar nuevo
+                                cliente</a>
+                            <%- include('./icons/go')%>
+
+                        </div>
+                    </article>
                     <hr>
                 </aside>
-                <section class="w-full h-full py-20 px-10">
+                <section class="w-full h-full py-10 px-10">
                     <%- include('./components/tb-clients')%>
                 </section>
             </div>

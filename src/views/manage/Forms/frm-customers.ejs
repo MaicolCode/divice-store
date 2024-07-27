@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head')%>
+        <title>
+            <%= title%>
+        </title>
+</head>
+
+<body>
+    <main>
+        <%- include('../partials/header')%>
+            <section class="p-5">
+                <div class="px-24 py-10">
+                    <article class="w-3/4 flex items-center justify-between mb-5">
+                        <p class="text-base font-medium">Registrar un nuevo cliente.</p>
+                        <div class="text-blue-600 text-sm flex items-center gap-1 ">
+                            <a href="/customers" class="font-medium hover:underline">Regresar</a>
+                            <%- include('../icons/go')%>
+
+                        </div>
+                    </article>
+
+                    <form class="w-3/4 border px-5 py-10 rounded-md shadow-md">
+                        <div class="mb-5">
+                            <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 ">Nombres y
+                                Apellidos del
+                                cliente</label>
+                            <input type="text" id="base-input"
+                                class="w-3/6 block p-2.5 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        </div>
+                        <div class="mb-5">
+                            <label for="email-address-icon"
+                                class="block mb-2 text-sm font-medium text-gray-900">Direccion
+                                del cliente</label>
+                            <input type="text" id="email-address-icon"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-3/6 p-2.5 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        </div>
+                        <div class="mb-5">
+                            <label for="email-address-icon" class="block mb-2 text-sm font-medium text-gray-900">Correo
+                                del cliente</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+                                        <path
+                                            d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
+                                        <path
+                                            d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
+                                    </svg>
+                                </div>
+                                <input type="text" id="email-address-icon"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-3/6 ps-10 p-2.5 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="name@flowbite.com">
+                            </div>
+                        </div>
+                        <div class="mb-5">
+                            <label for="email-address-icon"
+                                class="block mb-2 text-sm font-medium text-gray-900">Teléfono
+                                del cliente</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="icon icon-tabler icons-tabler-filled icon-tabler-device-mobile w-4 h-4 text-gray-500 dark:text-gray-400">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M16 2a3 3 0 0 1 2.995 2.824l.005 .176v14a3 3 0 0 1 -2.824 2.995l-.176 .005h-8a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-14a3 3 0 0 1 2.824 -2.995l.176 -.005h8zm-4 14a1 1 0 0 0 -.993 .883l-.007 .117l.007 .127a1 1 0 0 0 1.986 0l.007 -.117l-.007 -.127a1 1 0 0 0 -.993 -.883zm1 -12h-2l-.117 .007a1 1 0 0 0 0 1.986l.117 .007h2l.117 -.007a1 1 0 0 0 0 -1.986l-.117 -.007z" />
+                                    </svg>
+                                </div>
+                                <input type="text" id="email-address-icon"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-3/6 ps-10 p-2.5 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="+592 111-000-2222">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block mb-2 text-sm font-medium text-gray-900" for="user_avatar">Cargar imagen
+                                del dispositivo.</label>
+                            <input
+                                class="block w-3/6 text-sm text-white border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:placeholder-gray-400 file:bg-gray-800 file:py-2 file:border-none file:font-medium file:text-white"
+                                aria-describedby="user_avatar_help" id="user_avatar" type="file">
+                            <div class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="user_avatar_help">A profile
+                                picture is useful to confirm your are logged into your account</div>
+                        </div>
+                        <div class="relative h-12">
+                            <button
+                                class="text-sm font-medium border py-3 px-5 absolute right-0 rounded-md bg-slate-700 bg-opacity-25 active:bg-slate-400 active:bg-opacity-45">Registrar
+                                cliente</button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </section>
+    </main>
+</body>
+
+</html>
