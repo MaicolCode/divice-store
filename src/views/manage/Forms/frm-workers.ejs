@@ -16,24 +16,28 @@
                     <article class="flex items-center justify-between mb-5">
                         <p class="text-base font-medium">Registrar un nuevo trabajo.</p>
                         <div class="text-blue-600 text-sm flex items-center gap-1 ">
-                            <a href="/devices" class="font-medium hover:underline">Regresar</a>
+                            <a href="/workers" class="font-medium hover:underline">Regresar</a>
                             <%- include('../icons/go')%>
 
                         </div>
                     </article>
-
                     <form class="w-full border px-5 py-10 rounded-md shadow-md">
-                        <div class="mb-5">
-                            <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 ">Nombre del
-                                dispositivo</label>
-                            <input type="text" id="base-input"
-                                class="w-2/5 block p-2.5 text-gray-900 border border-gray-800 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <div class="font-medium text-sm mb-10 flex flex-col gap-3">
+                            <p class="block mb-2 text-sm font-medium text-gray-900 border-b border-gray-400 w-2/5">Datos
+                                de cliente.</p>
+                            <p><strong>Nombres:</strong> Jhon Maicol Paucar Chiguano</p>
+                            <p><strong>Cedula:</strong> 1755440532</p>
+                            <p><strong>Correo:</strong> paucarjhon07@gmail.com</p>
+                            <p><strong>Teléfono:</strong> 0982487322</p>
                         </div>
+
                         <div class="mb-5">
-                            <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 ">Categoria al
-                                que pertenece.</label>
+                            <label for="small-input"
+                                class="block mb-4 w-2/5 text-sm border-b border-gray-400 font-medium text-gray-900">Tipo
+                                de
+                                servicio.</label>
                             <select id="countries"
-                                class="bg-gray-50 border border-gray-800 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/5 p-2.5 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/5 p-2.5 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">
 
                                 <option>United States</option>
                                 <option>Canada</option>
@@ -42,32 +46,85 @@
                             </select>
                         </div>
                         <div class="mb-5">
-                            <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 ">Precio del
-                                dispositivo.</label>
-                            <input type="text" id="base-input"
-                                class="w-2/5 block p-2.5 text-gray-900 border border-gray-800 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                        </div>
-                        <div class="mb-5">
-                            <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 ">Descripcion
-                                del dispositivo.</label>
-                            <textarea id="message" rows="4"
-                                class="block p-2.5 w-2/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-800 focus:ring-blue-500 focus:border-blue-500 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            <label for="small-input"
+                                class="block mb-4 text-sm font-medium text-gray-900 border-b border-gray-400 w-2/5">Descripcion
+                                del trabajo a realizar.</label>
+                            <textarea id="message" rows="5"
+                                class="block p-2.5 w-2/3 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="Describe al dispositivo en esta seccion..."></textarea>
                         </div>
-                        <div>
-                            <label class="block mb-2 text-sm font-medium text-gray-900" for="user_avatar">Cargar imagen
-                                del dispositivo.</label>
-                            <input
-                                class="block w-2/5 text-sm text-white border border-gray-800 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:placeholder-gray-400 file:bg-gray-800 file:py-2 file:border-none file:font-medium file:text-white"
-                                aria-describedby="user_avatar_help" id="user_avatar" type="file">
-                            <div class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="user_avatar_help">A profile
-                                picture is useful to confirm your are logged into your account</div>
+                        <div class="mb-5">
+                            <label for="small-input"
+                                class="block mb-4 text-sm font-medium text-gray-900 border-b border-gray-400 w-2/5">Elementos
+                                utilizados en el trabajo.</label>
+
+                            <div class="relative overflow-x-auto shadow-md sm:rounded-lg border border-gray-300">
+                                <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                    <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                                        <tr>
+                                            <th scope="col" class="px-6 py-3">
+                                                Nombre del producto.
+                                            </th>
+                                            <th scope="col" class="px-6 py-3">
+                                                Cantidad
+                                            </th>
+                                            <th scope="col" class="px-6 py-3">
+                                                Precio
+                                            </th>
+                                            <th scope="col" class="px-6 py-3">
+                                                Total
+                                            </th>
+                                            <th scope="col" class="px-6 py-3 text-center">
+                                                Action
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="odd:bg-white even:bg-gray-50 border-b">
+                                            <td colspan="4">
+
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <div class="flex justify-center gap-3">
+                                                    <a href="#"
+                                                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Adicionar
+                                                        elementos</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="mb-5">
+                            <label for="small-input" class="block w-2/5 mb-2 text-sm font-medium text-gray-900">Valores
+                                a
+                                pagar.</label>
+                            <article class="w-3/4 p-10 border border-gray-300 rounded-lg flex flex-col gap-3">
+                                <div class="flex items-center justify-end gap-3">
+                                    <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900">Total
+                                        dispositivos utilizados:</label>
+                                    <input type="text" id="base-input"
+                                        class="w-28 block p-2.5 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                </div>
+                                <div class="flex items-center justify-end gap-3">
+                                    <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900">Total
+                                        pago por servicio:</label>
+                                    <input type="text" id="base-input"
+                                        class="w-28 block p-2.5 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                </div>
+                                <div class="flex items-center justify-end gap-3">
+                                    <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900">Total
+                                        a pagar:</label>
+                                    <input type="text" id="base-input"
+                                        class="w-28 block p-2.5 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                </div>
+                            </article>
                         </div>
                         <div class="relative h-12">
                             <button
                                 class="text-sm font-medium border py-3 px-5 absolute right-0 rounded-md bg-slate-700 bg-opacity-25 active:bg-slate-400 active:bg-opacity-45">Registrar
-                                nuevo
-                                dispositivo</button>
+                                trabajo como realizado</button>
                         </div>
 
                     </form>
